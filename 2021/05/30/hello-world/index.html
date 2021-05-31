@@ -161,18 +161,20 @@
   function initValine () {
     const valine = new Valine(Object.assign({
       el: '#vcomment',
+      master:'a68edc52f7f5f5bc',
+      friends:'0afb1d7e8a42d195',
       appId: 'TSYb9YSvrSKE2pFVMGf6VOyi-MdYXbMMI',
       appKey: 'qF6QvDcJSpnxBdOQvywyeeBg',
-      placeholder: 'Please leave your footprints',
+      placeholder: '建议使用QQ邮箱，评论头像采用QQ头像',
       avatar: 'monsterid',
       meta: 'nick,mail,link'.split(','),
       pageSize: '10',
-      lang: 'en',
+      lang: 'zh-CN',
       recordIP: false,
       serverURLs: '',
       emojiCDN: '',
       emojiMaps: "",
-      enableQQ: false,
+      enableQQ: true,
       path: window.location.pathname,
       requiredFields: ["nick,mail"],
       visitor: false
@@ -180,7 +182,7 @@
   }
 
   if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  else getScript('https://cdn.jsdelivr.net/gh/lete114/CDN2/js/Valine-Lete3.2.min.js').then(initValine)
 }
 
 if ('Valine' === 'Valine' || !true) {
